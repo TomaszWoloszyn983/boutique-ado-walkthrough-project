@@ -13,6 +13,7 @@ def checkout(request):
 
     stripe_public_key = settings.STRIPE_PUBLIC_KEY
     stripe_secret_key = settings.STRIPE_SECRET_KEY
+    print(f'\n\n\nSecret key !!!! {stripe_public_key} bla bla')
 
     if request.method == 'POST':
         bag = request.session.get('bag', {})
